@@ -15,56 +15,56 @@ sqa_criteria:
     repos:
       github.com/bioexcel/biobb_structure_checking git:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-black-hound.sh
-        container: qc.acc_stealthy-alizarin-liger
+        - /usr/bin/env sh .sqa/script.zippy-smalt-eleuth.sh
+        container: qc.acc_blurry-periwinkle-wolf
   QC.Doc:
     repos:
       github.com/bioexcel/biobb_structure_checking find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-amethyst-kiwi.sh
-        container: qc.doc_tasty-maroon-retriever
+        - /usr/bin/env sh .sqa/script.foggy-mustard-nightingale.sh
+        container: qc.doc_breezy-olive-uakari
       github.com/bioexcel/biobb_structure_checking git:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-viridian-oriole.sh
-        container: qc.doc_wiggy-orchid-coati
+        - /usr/bin/env sh .sqa/script.shaky-bistre-saola.sh
+        container: qc.doc_tasty-vermilion-chimpanzee
       github.com/bioexcel/biobb_structure_checking markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-purple-rottweiler.sh
-        container: qc.doc_sunny-harlequin-gopher
+        - /usr/bin/env sh .sqa/script.cloudy-red-chameleon.sh
+        container: qc.doc_scanty-amethyst-olm
       github.com/bioexcel/biobb_structure_checking restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-cobalt-giraffe.sh
-        container: qc.doc_bluesy-ivory-wrasse
+        - /usr/bin/env sh .sqa/script.snappy-beige-coati.sh
+        container: qc.doc_hasty-linen-frog
   QC.Lic:
     repos:
       github.com/bioexcel/biobb_structure_checking licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-myrtle-quoll.sh
-        container: qc.lic_nerdy-salmon-fly
+        - /usr/bin/env sh .sqa/script.trippy-linen-rhinoceros.sh
+        container: qc.lic_seedy-sapphire-raccoon
   QC.Sec:
     repos:
       github.com/bioexcel/biobb_structure_checking bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-mauve-chicken.sh
-        container: qc.sec_lovely-cinnabar-dane
+        - /usr/bin/env sh .sqa/script.woolly-peach-gar.sh
+        container: qc.sec_baggy-pear-mist
   QC.Sty:
     repos:
       github.com/bioexcel/biobb_structure_checking flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-amaranth-devil.sh
-        container: qc.sty_wiggy-persimmon-ferret
+        - /usr/bin/env sh .sqa/script.snappy-periwinkle-vulture.sh
+        container: qc.sty_cheeky-gamboge-shrew
       github.com/bioexcel/biobb_structure_checking jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-maroon-setter.sh
-        container: qc.sty_snazzy-purple-dogfish
+        - /usr/bin/env sh .sqa/script.shaggy-lime-koala.sh
+        container: qc.sty_nerdy-thistle-fox
       github.com/bioexcel/biobb_structure_checking stylelint:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-emerald-dogfish.sh
-        container: qc.sty_crappy-celadon-olm
+        - /usr/bin/env sh .sqa/script.fuzzy-buff-harrier.sh
+        container: qc.sty_silly-russet-cassowary
   QC.Ver:
     repos:
       github.com/bioexcel/biobb_structure_checking get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-asparagus-retriever.sh
-        container: qc.ver_sickly-alizarin-macaque
+        - /usr/bin/env sh .sqa/script.baggy-zucchini-affenpinscher.sh
+        container: qc.ver_gimpy-tan-ferret
 timeout: 1800
