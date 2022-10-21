@@ -1,0 +1,70 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.4
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/bioexcel/biobb_structure_checking:
+      branch: master
+      repo: https://github.com/bioexcel/biobb_structure_checking
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/bioexcel/biobb_structure_checking git:
+        commands:
+        - /usr/bin/env sh .sqa/script.stinky-black-hound.sh
+        container: qc.acc_stealthy-alizarin-liger
+  QC.Doc:
+    repos:
+      github.com/bioexcel/biobb_structure_checking find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-amethyst-kiwi.sh
+        container: qc.doc_tasty-maroon-retriever
+      github.com/bioexcel/biobb_structure_checking git:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-viridian-oriole.sh
+        container: qc.doc_wiggy-orchid-coati
+      github.com/bioexcel/biobb_structure_checking markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.chummy-purple-rottweiler.sh
+        container: qc.doc_sunny-harlequin-gopher
+      github.com/bioexcel/biobb_structure_checking restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lumpy-cobalt-giraffe.sh
+        container: qc.doc_bluesy-ivory-wrasse
+  QC.Lic:
+    repos:
+      github.com/bioexcel/biobb_structure_checking licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-myrtle-quoll.sh
+        container: qc.lic_nerdy-salmon-fly
+  QC.Sec:
+    repos:
+      github.com/bioexcel/biobb_structure_checking bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-mauve-chicken.sh
+        container: qc.sec_lovely-cinnabar-dane
+  QC.Sty:
+    repos:
+      github.com/bioexcel/biobb_structure_checking flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.squeaky-amaranth-devil.sh
+        container: qc.sty_wiggy-persimmon-ferret
+      github.com/bioexcel/biobb_structure_checking jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.frumpy-maroon-setter.sh
+        container: qc.sty_snazzy-purple-dogfish
+      github.com/bioexcel/biobb_structure_checking stylelint:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-emerald-dogfish.sh
+        container: qc.sty_crappy-celadon-olm
+  QC.Ver:
+    repos:
+      github.com/bioexcel/biobb_structure_checking get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-asparagus-retriever.sh
+        container: qc.ver_sickly-alizarin-macaque
+timeout: 1800
